@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Peminjaman Buku</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function validationForm() {
+            var name = document.registration.name;
+            var phone = document.registration.phone;
+            var course = document.registration.course;
+
+            if (name_valid(name)) {
+                            if (course_valid(course)) {
+                                if (phone_valid(phone)) {
+                                        return true; 
+                                }
+                            }   
+            }
+            return false;
+        }
+
+        function name_valid(name) {
+            var letter = /^[A-Za-z\s]+$/;
+            if (name.value.match(letter)) {
+                return true;
+            }
+            else {
+                alert("Judul Buku minim 10 karakter dan harus alfabet");
+                name.focus();
+                return false;
+            }
+        }
+
+        function course_valid(course) {
+            if (course.selectedIndex < 1) {
+                alert("Pilih Jenis Peminjaman");
+                course.focus();
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        function no_buku(phone) {
+            var numbers = /^[0-9]+$/;
+            var num_len = phone.value.length;
+            if (num_len == 0) {
+                alert("Nomor buku tidak boleh kosong");
+                return false;
+            }
+
+            else if (num_len <= 5) {
+                alert("Nomor buku harus 5 digit !");
+                return false;
+            }
+
+            else if (phone.value.match(numbers)) {
+                phone.focus();
+                return true;
+            }
+        }
+
+        var dateControl = document.querySelector('input[type="date"]');
+dateControl.value = '2017-06-01';
+console.log(dateControl.value); // prints "2017-06-01"
+console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript timestamp (ms)
+
+    </script>
+    
+</head>
+<body style="height: max-content; background-size: cover; background-image:url(https://i.pinimg.com/originals/9d/ee/07/9dee0784390c4d041be8473887a304cc.png)">
+    <div class="text-black-100">
+        <div class="card-body"></div>
+            <div class="container mt-3">
+                <div class="p-5  bg-white rounded">
+                    <div class="col-12"></div>
+                    <p>Darren Andereas Nurachmad</p>
+                    <p>Darren</p>    
+                    <p>5026201049</p>
+                        <div>
+                            <h1 class="text-center font-weight-bold">Form Input Peminjaman Buku</h1>
+                        </div>
+                        <form name="registration" onSubmit="return validationForm();" action="https://zedemy.com/" method="post">
+                            <div class="form-group">
+                                <label for="name"><b>Judul buku :</b></label>
+                                <input type="text" class="form-control" id="name" name="name">
+                            </div>
+            
+                            <div class="form-group">
+                                <label for="phone"><b>No buku :</b></label>
+                                <input type="tel" class="form-control" id="phone" name="phone">
+                            </div>
+            
+                            <div class="form-group">
+                                <label for="course"><b>Jenis Peminjaman:</b></label>
+                                <select id="course" name="course" class="form-control">
+                                    <option> </option>
+                                    <option>Biasa</option>
+                                    <option>Kilat</option>
+                                    <option>Lama</option>
+                                </select>
+                            </div>
+            
+                            <div class="form-group">
+                                <label for="pass"><b>Tanggal Peminjaman :</b>
+                                    <input type="date" class="form-control" name="dateControl">
+                                  </label>
+                            </div>
+            
+                            <div class="button form-group">
+                                <button type="submit" class="btn btn-info btn-md">Simpan</button>
+                                <button type="reset" class="btn btn-info bg-success">Reset</button>
+                            </div>
+                        </form>
+                </div>
+            </div>
+    </div>  
+</body>
+</html>
