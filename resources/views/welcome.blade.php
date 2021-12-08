@@ -19,35 +19,28 @@
                 height: 100vh;
                 margin: 0;
             }
-
             .full-height {
                 height: 100vh;
             }
-
             .flex-center {
                 align-items: center;
                 display: flex;
                 justify-content: center;
             }
-
             .position-ref {
                 position: relative;
             }
-
             .top-right {
                 position: absolute;
                 right: 10px;
                 top: 18px;
             }
-
             .content {
                 text-align: center;
             }
-
             .title {
                 font-size: 84px;
             }
-
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -57,7 +50,6 @@
                 text-decoration: none;
                 text-transform: uppercase;
             }
-
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -81,19 +73,23 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Darren 5026201049
+                    Darren Andereas <br> 5026201049
                 </div>
 
                 <div class="links">
-                    <a href="assignment1selfprofile.html">Tugas 1</a>
-                    <a href="assignment2_stylingcss.html">Tugas 2</a>
-                    <a href="bootstrap_assignment3_darrenandereas.html">Tugas 3</a>
-                    <a href="Praktikum1.html">Praktikum 1</a>
-                    <a href="bmi">Tugas 4</a>
-                    <a href="index.html">Praktikum 2</a>
+                    <a href="assignment1selfprofile.html">TUGAS 1</a>
+                    <a href="assignment2_stylingcss.html">TUGAS 2</a>
+                    <a href="bootstrap_assignment3_darrenandereas.html">TUGAS 3</a>
+                    <a href="Praktikum1.html">PRAKTIKUM 1</a>
+                    <a href="tugaske4">TUGAS 4</a>
+                    <a href="praktikum2">PRAKTIKUM 2</a>
                     <a href="a_5026201049_c.html">ETS</a>
-                    <a href="https://github.com/laravel/laravel">PHP</a>
-                    <a href="pendapatan">Tugas Pendapatan</a>
+                    <a href="hal1php">TUGAS PHP</a>
+                    <br>
+                    <br>
+                    <a href="/pegawai">TUGAS Pegawai</a>
+                    <a href="pendapatan">TUGAS PENDAPATAN</a>
+                    <a href="/bahagia">TUGAS ABSENSI</a>
                 </div>
             </div>
         </div>

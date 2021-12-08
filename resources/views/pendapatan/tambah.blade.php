@@ -1,6 +1,12 @@
+@extends('layout.bahagia')
+@section('title','Data Pendapatan Pegawai')
+@section('konten')
+
+@section('judulhalaman', 'Daftar Pendapatan')
+
 <html>
 <head>
-	<title>Proyek1</title>
+	<title>Projek1</title>
 </head>
 <body>
 
@@ -23,3 +29,4 @@
 
 </body>
 </html>
+@endsection
