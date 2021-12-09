@@ -25,7 +25,7 @@
         /* Set gray background color and 100% height */
         .sidenav,
         body {
-          background-color: #f1f1f1;
+          background-color: #00FF00;
           height: 100%;
           padding: 3%;
           font-family: 'Montserrat', sans-serif;
