@@ -89,7 +89,7 @@
                     <br>
                     <a href="/pegawai">TUGAS Pegawai</a>
                     <a href="pendapatan">TUGAS PENDAPATAN</a>
-                    <a href="/bahagia">TUGAS ABSENSI</a>
+                    <a href="/kopi">Kopi</a>
                 </div>
             </div>
         </div>

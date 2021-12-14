@@ -57,6 +57,15 @@ Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 
-Route::get('/bahagia', function() {
-    return view('layout.bahagia');
+Route::get('/kopi','KopiController@index');
+Route::get('/Kopi/tambah','KopiController@tambah');
+Route::post('/Kopi/store','KopiController@store');
+Route::get('/Kopi/edit/{id}','KopiController@edit');
+Route::post('/Kopi/update','KopiController@update');
+Route::get('/Kopi/hapus/{id}','KopiController@hapus');
+Route::get('/Kopi/cari','KopiController@cari');
+Route::get('/Kopi/detail/{id}','KopiController@view');
+
+Route::get('kopi', function () {
+    return view('kopi.index');
 });
