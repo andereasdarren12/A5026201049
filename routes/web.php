@@ -66,6 +66,15 @@ Route::get('/Kopi/hapus/{id}','KopiController@hapus');
 Route::get('/Kopi/cari','KopiController@cari');
 Route::get('/Kopi/detail/{id}','KopiController@view');
 
-Route::get('kopi', function () {
-    return view('kopi.index');
+    Route::get('/nilaikuliah','nilaikuliahController@index');
+Route::get('/nilaikuliah/tambah','nilaikuliahController@tambah');
+Route::post('/nilaikuliah/store','nilaikuliahController@store');
+Route::get('/nilaikuliah/edit/{id}','nilaikuliahController@edit');
+Route::post('/nilaikuliah/update','nilaikuliahController@update');
+Route::get('/nilaikuliah/hapus/{id}','nilaikuliahController@hapus');
+Route::get('/nilaikuliah/cari','nilaikuliahController@cari');
+Route::get('/nilaikuliah/detail/{id}','nilaikuliahController@view');
+
+Route::get('nilaikuliah', function () {
+    return view('nilaikuliah.index');
 });

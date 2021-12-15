@@ -2,15 +2,15 @@
 @section('title','Data Pendapatan Pegawai')
 @section('konten')
 
-@section('judulhalaman', 'Daftar Pendapatan')
+@section('judulhalaman', 'Daftar Nilai Kuliah')
 <html>
 <head>
-	<title>Projek1</title>
+	<title>EAS</title>
 </head>
 <body>
-	<h3>Data Pendapatan</h3>
+	<h3>Data Nilai Kuliah</h3>
 
-	<a href="/pendapatan/tambah"> + Tambah Pegawai Baru</a>
+	<a href="/pendapatan/tambah"> + Tambah Nilai Kuliah</a>
 
 	<br/>
 	<br/>
@@ -18,12 +18,11 @@
 	<table class="table table-striped table-hover">
 		<tr>
 			<th>ID</th>
-			<th>IDPegawai</th>
-			<th>Bulan</th>
-			<th>Tahun</th>
-			<th>Gaji</th>
-            <th>Tunjangan</th>
-            <th>Opsi</th>
+			<th>NRP</th>
+			<th>Nilai Angka</th>
+			<th>Nilai Huruf</th>
+            <th>SKS</th>
+            <th>Bobot Nilai</th>
 		</tr>
 		@foreach($pendapatan as $p)
 		<tr>

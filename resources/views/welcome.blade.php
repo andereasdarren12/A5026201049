@@ -88,8 +88,8 @@
                     <br>
                     <br>
                     <a href="/pegawai">TUGAS Pegawai</a>
-                    <a href="pendapatan">TUGAS PENDAPATAN</a>
                     <a href="/kopi">Kopi</a>
+                    <a href="pendapatan">Nilai Kuliah EAS</a>
                 </div>
             </div>
         </div>

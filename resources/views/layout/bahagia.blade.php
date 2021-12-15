@@ -4,105 +4,165 @@
 <head>
     <title>@yield('title')</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link
+        href="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link
+        rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+        crossorigin="anonymous"
+        />
+
+
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
-    <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <script
+        src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js">
+    </script>
 
     <style>
-        :root{
-            --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 0.125em 0.125em 0.25em rgba(0,0,0,.15);
-        }
-        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-        .row.content {height: 550px}
-        /* Set gray background color and 100% height */
-        .sidenav,
-        body {
-          background-color: #00FF00;
-          height: 100%;
-          padding: 3%;
-          font-family: 'Montserrat', sans-serif;
-        }
-        .col-sm-3 {
-            right: 1em;
-        }
-        .well {
-            margin-top: 2.5em;
-            box-shadow: var(--bs);
-        }
-        img {
-            box-shadow: var(--bs);
-        }
-        /* On small screens, set height to 'auto' for the grid */
-        @media screen and (max-width: 767px) {
-          .row.content {height: auto;}
-        }
+    /* The sidebar menu */
+    .sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 180px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #212; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 50px;
+    }
+
+    /* The navigation menu links */
+    .sidenav a {
+    padding: 6px 8px 6px 16px;
+    color: #818181;
+    display: block;
+    transition: all 1s;
+    border-radius: .25rem;
+    margin: 0 1rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    }
+
+    /* Style page content */
+    .main {
+    margin-left: 190px; /* Same as the width of the sidebar */
+    padding: 0px;
+    font-size: 20px;
+    }
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    }
+
+    .navbar {
+  background-color: #1c1c1c;
+  margin-left: 150px;
+    }
+
+    .navbar a {
+    transition: all 1s;
+    border-radius: .25rem;
+    margin: 0 1rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    }
+
+    input, textarea, .form-group {
+        font-size: 20px !important;
+    }
+
     </style>
+
 </head>
+    <body data-spy="scroll" data-target=".navbar">
 
-<body>
+        <nav class="navbar navbar-expand-lg navbar-light">
 
-    <nav class="navbar navbar-inverse visible-xs">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Logo</a>
-          </div>
-          <div class="collapse navbar-collapse" id="myNavbar">
-            <ul class="nav navbar-nav">
-              <li><a href="/pegawai">Pegawai</a></li>
-              <li><a href="/absen">Absen</a></li>
-              <li><a href="/pendapatan">Pendapatan</a></li>
-              <li><a href="#">Minggu Depan</a></li>
-              <li><a href="#">Praktikum</a></li>
-            </ul>
-          </div>
+            <img class="darren-icon" src="https://i.postimg.cc/FHjdRy6h/darren.jpg" height='100px' padding='2rem'> </img>
+
+
+        <button class="navbar-toggler bg-white" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar" data-spy="scroll" data-target=".navbar">
+          <ul class="navbar-nav ml-auto nav-pills">
+
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#"> <i class=""></i>  &nbsp; 5026201049 </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link text-white" target="_blank"> <i class="fas fa-user-circle fa-x"></i> &nbsp; Darren Andereas </a>
+            </li>
+
+          </ul>
         </div>
-    </nav>
 
-    <div class="container-fluid">
-        <div class="row content p-4">
-            <div class="col-sm-3 sidenav hidden-xs">
-                <img src="{{ asset('images/darren.jpg') }}" width = "200px" height="250px" class="img-rounded">
-                <br>
-                <h1>
-                    Darren Andereas Nurachmad
-                </h1>
-                <h2>
-                    5026201049
-                </h2>
-                <ul class="nav nav-pills nav-stacked">
-                <li><a href="/pegawai">Pegawai</a></li>
-                <li><a href="/absen">Absen</a></li>
-                <li><a href="/pendapatan">Pendapatan</a></li>
-                <li><a href="#">Minggu Depan</a></li>
-                <li><a href="#section3">Praktikum</a></li>
-                </ul><br>
-            </div>
+        </nav>
+
+    <!-- Side navigation -->
+
+<div class="sidenav">
+    <a href="/" ><i class="fas fa-home"></i>Home</a>
+    <a href="/pegawai"><i class="fas fa-user-tie"></i>Pegawai</a>
+    <a href="/absen"><i class="far fa-clipboard"></i>Absen</a>
+    <a href="/tugas"><i class="fas fa-tasks"></i>Tugas</a>
+    <a href="/tumbuhan">Praktikum</a>
+  </div>
+
+  <!-- Page content -->
+  <div class="main">
+    @yield('judulhalaman')
+    @section('konten')
 
 
-            <div class="col-sm-9">
-                <div class="well">
-                    <h3>@yield('judulhalaman')</h3>
+    @show
+  </div>
 
-                    @section('konten')
 
-                    @show
-                </div>
-            </div>
-        </div>
-    </div>
+  <footer class="footer container fixed-bottom">
+
+    <p class="float-right">
+
+      <a href="/" class="text-warning">
+
+        Back to home
+
+      </a>
+
+    </p>
+
+    <h3>
+      &copy; Hak Cipta oleh 5026201049-Darren Andereas
+    </h3>
+
+
+  </footer>
+
+
 </body>
 
 </html>
